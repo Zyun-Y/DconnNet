@@ -19,9 +19,9 @@ general
   scripts: bash files for training different datasets
 ```
 ## Implementation
-* Training on datasets in the paper.
+### Training on datasets in the paper.
 
-* Training on your own dataset.
+### Training on your own dataset.
  1. Make your own dataloader.
  2. Replace your dataloader in main() function of ```train.py```. If need k-fold validation, use exp_id to specify your sub-folds.
  3. Specify your network setting in ```train.py```

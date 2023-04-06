@@ -25,7 +25,10 @@ general
  1. Make your own dataloader.
  2. Replace your dataloader in main() function of ```train.py```. If need k-fold validation, use exp_id to specify your sub-folds.
  3. Specify your network setting in ```train.py```
- 4. Run the following command
+ 4. Run: 
   ```python train.py```
-  
+
+### Notice of the codes
+Please always make sure the dimenstion of your data is correct. For, example, in ```connect_loss.py```, we specified the shape of each each in the comment. When there is issue, please always check the dimension first.
+
 ## Pretrained model

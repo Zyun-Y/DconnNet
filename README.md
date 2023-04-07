@@ -11,7 +11,7 @@ Pytorch 1.7.0+cu110
 ## Code Stucture
 The main stucture and important files or functions of this repository is as following:
 ```
-general
+
   - train.py: main file. Define your parameters, selection of GPU etc.
   - solver.py: the training details and testing details.
   - connect_loss.py: loss function for DconnNet

@@ -2,6 +2,7 @@
 **Pytorch implementation for CVPR2023 paper "Directional Connectivity-based Segmentation of Medical Images" [[paper](https://arxiv.org/pdf/2304.00145.pdf)].**
 
 For another simple connectivity-based method, please also check [BiconNet](https://github.com/Zyun-Y/BiconNets)
+![image](https://user-images.githubusercontent.com/72995945/230514751-29287ab6-a226-495e-99c7-fcf03254f027.png)
 
 ## Requirements
 Pytorch 1.7.0+cu110

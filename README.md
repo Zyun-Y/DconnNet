@@ -40,7 +40,7 @@ dataset
 
 **ISIC2018**
 
-Please download the resized data at [here](https://drive.google.com/drive/folders/1Jz-4GP72ymEX5AOcQj8uKZ9y5TP5uYWo?usp=share_link)
+The resized data we used in our paper follows [this site](https://github.com/duweidai/Ms-RED)
 ```
 /ISIC2018_npy_all_224_320
   /image

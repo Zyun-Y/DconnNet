@@ -79,7 +79,7 @@ The resized data we used in our paper follows [this site](https://github.com/duw
 Please always make sure the dimenstion of your data is correct. For, example, in ```connect_loss.py```, we specified the shape of each each in the comment. When there is issue, please always check the dimension first.
 
 ## Pretrained model
-The pretrained model can be downloaded at [here](https://drive.google.com/drive/folders/11EcwtsgaSx63ZQVLLj4c7-Nr9Wpok6BT?usp=sharing)
+The pretrained model and predictions can be downloaded at [here](https://drive.google.com/drive/folders/1xwg5J1P628vP1bcqL_d5uU-L-Vn8_A2f?usp=sharing)
 
 ## 
 

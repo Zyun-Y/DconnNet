@@ -47,7 +47,7 @@ def parse_args():
     parser.add_argument('--gamma', type=float, default=0.5,  
                         help='define only when you select step lr optimization: what is the annealing rate for reducing your lr (lr = lr*gamma)')
 
-    parser.add_argument('--use_SDL', action='store_true', default=True,
+    parser.add_argument('--use_SDL', action='store_true', default=False,
                         help='set as True if use SDL loss; only for Retouch dataset in this code. If you use it with other dataset please define your own path of label distribution in solver.py')
     parser.add_argument('--folds', type=int, default=3,
                         help='define folds number K for K-fold validation')

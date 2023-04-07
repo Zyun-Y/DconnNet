@@ -30,7 +30,7 @@ Please store the each dataset in the following path:
 
 **Retouch**
 ```
-dataset
+/retouch
   /Cirrus ### device, same for Spectrailis and Topcon
     /train
       /TRAIN002 ### volume id

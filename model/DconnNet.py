@@ -15,7 +15,7 @@ from model.resnet import resnet34
 from torch.nn import functional as F
 import torchsummary
 from torch.nn import init
-import simplecv.module as scm
+import model.gap as gap
 up_kwargs = {'mode': 'bilinear', 'align_corners': True}
 
 
@@ -31,7 +31,7 @@ class DconnNet(nn.Module):
         self.fb3=FeatureBlock(128,64,relu=False) #64
         self.fb2=FeatureBlock(64,64) 
 
-        self.gap = scm.GlobalAvgPool2D()
+        self.gap = gap.GlobalAvgPool2D()
 
         self.sb1 = SpaceBlock(512,512,512)
         self.sb2 = SpaceBlock(512,256,256)

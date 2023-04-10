@@ -20,7 +20,7 @@ The main stucture and important files or functions of this repository is as foll
     
   data_loader: your data loader files and the SDL weights for your dataset if needed.
   model: DconnNet model files
-  scripts: bash files for training different datasets
+  scripts: scripts for training different datasets
 ```
 ## Implementation
 ### Train on datasets in the paper.

@@ -40,7 +40,7 @@ Please store the each dataset in the following path:
 
 **ISIC2018**
 
-The resized data we used in our paper follows [this site](https://github.com/duweidai/Ms-RED)
+The resized data we used and the implementation of training in our paper follows [this site](https://github.com/duweidai/Ms-RED)
 ```
 /ISIC2018_npy_all_224_320
   /image

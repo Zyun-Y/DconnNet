@@ -264,7 +264,11 @@ class connect_loss(nn.Module):
 
         bce_loss = self.BCEloss(pred, target).mean()
         conn_l = self.BCEloss(c_map,con_target).mean()
-        bicon_l = self.BCEloss(bicon_map.squeeze(1),con_target).mean()
-        loss =  bce_loss + conn_l + edge_l + 0.2* bicon_l+dice_l #+ bce_loss# +loss_out_dice# +sum_l # + edge_l+loss_out_dice
+
+        if self.args.dataset == 'chase':
+            loss =  bce_loss + conn_l + edge_l +dice_l
+        else:
+            bicon_l = self.BCEloss(bicon_map.squeeze(1),con_target).mean()
+            loss =  bce_loss + conn_l + edge_l + 0.2* bicon_l+dice_l #+ bce_loss# +loss_out_dice# +sum_l # + edge_l+loss_out_dice
 
         return loss

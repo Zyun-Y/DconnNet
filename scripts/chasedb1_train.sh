@@ -7,7 +7,7 @@ python train.py \
 --num-class 1 \
 --batch-size 4 \
 --epochs 130 \
---lr 0.0035 \
+--lr 0.0038 \
 --lr-update 'poly' \
 --folds 5
 

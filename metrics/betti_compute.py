@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.image as mpimg
 import os
 sys.path.append('Betti_Compute/')
-import ext_libs.Gudhi as gdh
+import metrics.ext_libs.Gudhi as gdh
 
 def betti_number(imagely):
 	# imagely_copy = mpimg.imread('output_IMG_1.png')

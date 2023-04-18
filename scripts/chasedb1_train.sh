@@ -7,10 +7,8 @@ python train.py \
 --num-class 1 \
 --batch-size 4 \
 --epochs 130 \
---lr 0.004 \
---lr-update 'step' \
---lr-step 40 \
---gamma 0.3 \
+--lr 0.0035 \
+--lr-update 'poly' \
 --folds 5
 
 

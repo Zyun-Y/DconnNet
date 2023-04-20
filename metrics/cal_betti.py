@@ -6,20 +6,26 @@ import torch
 import torch.nn as nn
 import os
 # import visdom
+import skimage.measure
 import random
 from tqdm import tqdm as tqdm
 import sys
-from betti_compute import betti_number
+from metrics.betti_compute import betti_number
 # from TDFMain import *
 # from TDFMain_pytorch import *
 
 
 
+def betti_0(mask):
+    mask = mask.cpu().data.numpy()
+    _, count = skimage.measure.label(mask,connectivity=2, return_num=True)
+    return count
 
 def getBetti(binaryPredict, masks):
     predict_betti_number_ls = []
     groundtruth_betti_number_ls =[]
     betti_error_ls = []
+    betti_0_error_ls = []
     topo_size = 65
     gt_dmap = masks.cuda()
     # et_dmap = likelihoodMap_final
@@ -45,11 +51,14 @@ def getBetti(binaryPredict, masks):
             #              x:min(x + topo_size, gt_dmap.shape[1])])
 
             # print('likelihood', likelihood.shape, 'groundtruth', groundtruth.shape, 'binaryPredict', binary.shape)
+            pred_betti0 = betti_0(binary)
+            groundtruth_betti0 = betti_0(groundtruth)
             predict_betti_number = betti_number(binary)
             groundtruth_betti_number = betti_number(groundtruth)
-            # print(predict_betti_number, groundtruth_betti_number)
+            # print(pred_betti0, groundtruth_betti0)
             predict_betti_number_ls.append(predict_betti_number)
             groundtruth_betti_number_ls.append(groundtruth_betti_number)
             betti_error_ls.append(abs(predict_betti_number-groundtruth_betti_number))
+            betti_0_error_ls.append(abs(pred_betti0-groundtruth_betti0))
 
-    return betti_error_ls
+    return betti_error_ls,betti_0_error_ls

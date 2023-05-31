@@ -243,10 +243,6 @@ class connect_loss(nn.Module):
         ### get edges gt###
         class_conn = con_target.view([c_map.shape[0],self.args.num_class,8,c_map.shape[2],c_map.shape[3]])
         sum_conn = torch.sum(class_conn,dim=2)
-
-        ### get edges gt###
-        class_conn = con_target.view([c_map.shape[0],self.args.num_class,8,c_map.shape[2],c_map.shape[3]])
-        sum_conn = torch.sum(class_conn,dim=2)
         
         ## edge: (B, 1, H, W)
         edge = torch.where((sum_conn<8) & (sum_conn>0),torch.full_like(sum_conn, 1),torch.full_like(sum_conn, 0))

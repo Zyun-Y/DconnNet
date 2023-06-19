@@ -180,7 +180,7 @@ class connect_loss(nn.Module):
         #######
         target = target.type(torch.LongTensor).cuda()
         batch_num = c_map.shape[0]
-        onehotmask = F.one_hot(target.long(),4) # change it to your class number if needed
+        onehotmask = F.one_hot(target.long(),self.args.num_class) # change it to your class number if needed
         onehotmask = onehotmask.permute(0,3,1,2) 
         onehotmask = onehotmask.float()
 

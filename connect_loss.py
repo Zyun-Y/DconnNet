@@ -190,7 +190,9 @@ class connect_loss(nn.Module):
         ### matrix for shifting
         hori_translation = self.hori_translation.repeat(batch_num,1,1,1).cuda()
         verti_translation = self.verti_translation.repeat(batch_num,1,1,1).cuda()
-
+        ## shape for hori_translation: [Batch, NumClass, H, H]
+        ## shape for verti_translation: [Batch, NumClass, W, W]
+        
         dice_l = 0
 
         ### get edges gt###

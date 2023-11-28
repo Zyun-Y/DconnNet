@@ -76,7 +76,7 @@ The resized data we used and the implementation of training in our paper follows
   
 
 ## Notice of the codes
-Please always make sure the dimenstion of your data is correct. For, example, in ```connect_loss.py```, we specified the shape of each each in the comment. When there is issue, please always check the dimension first.
+Please always make sure the dimenstion of your data is correct. For example, in ```connect_loss.py```, we specified the shape of each each in the comment. When there is issue, please always check the dimension first.
 
 ## Pretrained model
 The pretrained model and predictions can be downloaded at [here](https://drive.google.com/drive/folders/1xwg5J1P628vP1bcqL_d5uU-L-Vn8_A2f?usp=sharing)

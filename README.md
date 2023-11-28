@@ -86,4 +86,4 @@ The pretrained model and predictions can be downloaded at [here](https://drive.g
 ## Citation
 If you find this work useful in your research, please consider citing:
 
-*Z. Yang and S. Farsiu, "Directional Connectivity-based Segmentation of Medical Images" in CVPR, 2023.*
+*Z. Yang and S. Farsiu, "Directional Connectivity-based Segmentation of Medical Images," in CVPR, 2023, pp. 11525-11535.*

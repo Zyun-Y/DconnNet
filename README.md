@@ -82,7 +82,7 @@ Please always make sure the dimenstion of your data is correct. For example, in 
 The pretrained model and predictions can be downloaded at [here](https://drive.google.com/drive/folders/1xwg5J1P628vP1bcqL_d5uU-L-Vn8_A2f?usp=sharing)
 
 ## If use SDL loss:
-Please pre-calculate the mask size distribution and save it as a npy file (i.e., the pos_cnt.npy in the Solver function) with the shape of (C, N) where C is the class number, and N is the sample number (number of images).
+Please pre-calculate the mask size distribution and save it as a .npy file (i.e., the pos_cnt.npy in the Solver function) with the shape of (C, N) where C is the class number, and N is the sample number (number of images). For example, index (1,10) stands for the mask size (pixel count) of the second class in image 11.
 
 ## Citation
 If you find this work useful in your research, please consider citing:

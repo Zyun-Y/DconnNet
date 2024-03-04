@@ -257,7 +257,7 @@ class connect_loss(nn.Module):
 
         edge_l = self.edge_loss(bicon_map,edge)
 
-        dice_l = self.dice_loss(pred, target)
+        dice_l = self.dice_loss(pred[:,0], target[:,0]) 
         
 
         bce_loss = self.BCEloss(pred, target).mean()

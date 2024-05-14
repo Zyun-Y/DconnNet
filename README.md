@@ -40,13 +40,21 @@ Please store the each dataset in the following path:
 
 **ISIC2018**
 
-The resized data we used and the implementation of training in our paper follows [this site](https://github.com/duweidai/Ms-RED)
+The resized data we used and the training pipeline in our paper follows [this site](https://github.com/duweidai/Ms-RED) with following hyperparameters:
+
 ```
 /ISIC2018_npy_all_224_320
   /image
   /label
 
+Image size: (224, 320)
+batch size: 10
+epoch: 200
+starting lr: 1e-4
+Optimizer: Adam with weight decay 1e-8
+lr_scheduler: CosineAnnealingWarmRestarts (T_0=15, T_mult=2, eta_min = 0.00001).
 ```
+However, different settings (e.g., different sizes, pipelines) of ISIC data might yield different results. We do recommend you try DconnNet in your own ISIC data setting, following the guide in the next section. 
 
 **CHASEDB1**
 ```
